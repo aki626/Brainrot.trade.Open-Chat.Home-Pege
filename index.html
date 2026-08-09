@@ -37,21 +37,34 @@
 }
 
 /* ============================
-   タイトルバー（上部固定）
+   タイトル（ネオン発光）
 ============================ */
-.header-title {
-  width: calc(100% - 260px); /* 右メニューの幅を避ける */
-  background: #111;
-  border-bottom: 2px solid #00eaff;
-  padding: 15px 20px;
-  font-size: 24px;
-  font-weight: bold;
+h2 {
   color: #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9000;
+  font-size: 28px;
+  font-weight: bold;
+  animation: glow 2s infinite;
+}
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 5px #00eaff,
+      0 0 10px #00eaff,
+      0 0 20px #00eaff;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #00eaff,
+      0 0 20px #00eaff,
+      0 0 40px #00eaff,
+      0 0 60px #00eaff;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #00eaff,
+      0 0 10px #00eaff,
+      0 0 20px #00eaff;
+  }
 }
 
 /* ============================
@@ -68,7 +81,7 @@ body {
   max-width: 600px;
   padding: 20px;
   margin-left: 20px;
-  margin-top: 90px; /* タイトルバーの高さ分下げる */
+  margin-top: 20px;
 }
 
 /* ============================
@@ -173,20 +186,13 @@ window.onload = () => {
   <div class="loader-text">Loading</div>
 </div>
 
-</div>
+<!-- タイトル（ネオン発光） -->
+<h2>いろいろブレインロット交換オプ！（ロブロもフォトナも！）雑談も全然OK！</h2>
 
-   <p> </p>
-   <p> </p>
-   <p> </p>
-   <p> </p>
-   <p> </p>
-      
-  <h2>いろいろブレインロット交換オプ！（ロブロもフォトナも！）雑談も全然OK！</h2>
-   
-    <p>このオープンチャットは、ブレインロットの交換や雑談などをしています！<br>
-   ルールは、1.荒らしをしない　2.詐欺しない　です<br>
-   参加は一番下の参加ボタンから！<br>
-   今現在：10人　50人行ったらキャラ配布します（フォトナ版）</p>
+<p>このオープンチャットは、ブレインロットの交換や雑談などをしています！<br>
+ルールは、1.荒らしをしない　2.詐欺しない　です<br>
+参加は一番下の参加ボタンから！<br>
+今現在：10人　50人行ったらキャラ配布します（フォトナ版）</p>
 
 <!-- メニュー（右側固定） -->
 <nav>
@@ -216,7 +222,10 @@ window.onload = () => {
   <h2>成立した交換一覧</h2>
   <table class="exchange-table">
     <tr><th>交換者</th><th>内容</th><th>日時</th></tr>
-    <tr><td>交換者1  交換者2</td><td>交換者1：パイレーツトララレドン＆ネオンベーコン＆エッグ妖怪ピザリザ ←-→ 交換者2：トララレドン2体＆ロス家</td><td>2026/07/29</td></tr>
+    <tr><td>交換者1 / 交換者2</td>
+        <td>交換者1：パイレーツトララレドン＆ネオンベーコン＆エッグ妖怪ピザリザ ←→ 交換者2：トララレドン2体＆ロス家</td>
+        <td>2026/07/29</td>
+    </tr>
   </table>
 </section>
 
