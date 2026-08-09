@@ -46,25 +46,9 @@ h2 {
   animation: glow 2s infinite;
 }
 @keyframes glow {
-  0% {
-    text-shadow:
-      0 0 5px #00eaff,
-      0 0 10px #00eaff,
-      0 0 20px #00eaff;
-  }
-  50% {
-    text-shadow:
-      0 0 10px #00eaff,
-      0 0 20px #00eaff,
-      0 0 40px #00eaff,
-      0 0 60px #00eaff;
-  }
-  100% {
-    text-shadow:
-      0 0 5px #00eaff,
-      0 0 10px #00eaff,
-      0 0 20px #00eaff;
-  }
+  0% { text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff; }
+  50% { text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #00eaff, 0 0 60px #00eaff; }
+  100% { text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff; }
 }
 
 /* ============================
@@ -109,10 +93,21 @@ nav a {
 }
 
 /* ============================
-   セクション
+   説明文＋ロゴ横並び
 ============================ */
-section {
-  margin-bottom: 40px;
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info-logo {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #00eaff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00eaff;
+  object-fit: cover;
 }
 
 /* ============================
@@ -186,13 +181,23 @@ window.onload = () => {
   <div class="loader-text">Loading</div>
 </div>
 
-<!-- タイトル（ネオン発光） -->
+<!-- タイトル -->
 <h2>いろいろブレインロット交換オプ！（ロブロもフォトナも！）雑談も全然OK！</h2>
 
-<p>このオープンチャットは、ブレインロットの交換や雑談などをしています！<br>
-ルールは、1.荒らしをしない　2.詐欺しない　です<br>
-参加は一番下の参加ボタンから！<br>
-今現在：10人　50人行ったらキャラ配布します（フォトナ版）</p>
+<!-- 説明文＋ロゴ横並び -->
+<div class="info-box">
+
+  <p>
+    このオープンチャットは、ブレインロットの交換や雑談などをしています！<br>
+    ルールは、1.荒らしをしない　2.詐欺しない　です<br>
+    参加は一番下の参加ボタンから！<br>
+    今現在：10人　50人行ったらキャラ配布します（フォトナ版）
+  </p>
+
+  <!-- ロゴ画像（差し替えOK） -->
+  <img class="info-logo" src="logo.png" alt="ロゴ">
+
+</div>
 
 <!-- メニュー（右側固定） -->
 <nav>
