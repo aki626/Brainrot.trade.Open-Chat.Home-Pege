@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>＜フォトナ＞いろんなブレインロット交換オプ！</title>
+<title>＜フォトナ＞いろいろブレインロットオプ（雑談も〇）</title>
 
 <style>
 /* ============================
@@ -37,6 +37,24 @@
 }
 
 /* ============================
+   タイトルバー（上部固定）
+============================ */
+.header-title {
+  width: calc(100% - 260px); /* 右メニューの幅を避ける */
+  background: #111;
+  border-bottom: 2px solid #00eaff;
+  padding: 15px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+}
+
+/* ============================
    全体（細長くする）
 ============================ */
 body {
@@ -47,9 +65,10 @@ body {
 }
 
 .main-wrapper {
-  max-width: 600px;      /* ←細長くする */
+  max-width: 600px;
   padding: 20px;
-  margin-left: 20px;     /* メニューとの距離 */
+  margin-left: 20px;
+  margin-top: 90px; /* タイトルバーの高さ分下げる */
 }
 
 /* ============================
@@ -59,8 +78,8 @@ nav {
   position: fixed;
   right: 0;
   top: 0;
-  width: 230px;          /* 大きめに表示 */
-  height: 100vh;         /* 画面いっぱいの縦長 */
+  width: 230px;
+  height: 100vh;
   background: #111;
   border-left: 2px solid #00eaff;
   display: flex;
@@ -73,7 +92,7 @@ nav a {
   color: #00eaff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 22px;       /* 大きく表示 */
+  font-size: 22px;
 }
 
 /* ============================
@@ -84,7 +103,7 @@ section {
 }
 
 /* ============================
-   メンバーUI（ネオン）
+   メンバーUI（BNN風）
 ============================ */
 .member-card {
   background: #111;
@@ -154,6 +173,15 @@ window.onload = () => {
   <div class="loader-text">Loading</div>
 </div>
 
+<!-- タイトルバー -->
+<div class="header-title">
+  ＜フォトナ＞いろいろブレインロットオプ（雑談も〇）
+</div>
+   <p>このオープンチャットはフォトナ版ブレインロットの交換や雑談などをしています！<br>
+   ルールは、1.荒らしをしない　2.詐欺しない　です<br>
+   参加は一番下の参加ボタンから！<br>
+   今現在：9人　50人行ったらキャラ配布します</p>
+
 <!-- メニュー（右側固定） -->
 <nav>
   <a href="#members">メンバー</a>
@@ -182,7 +210,7 @@ window.onload = () => {
   <h2>成立した交換一覧</h2>
   <table class="exchange-table">
     <tr><th>交換者</th><th>内容</th><th>日時</th></tr>
-    <tr><td>交換者1　　　交換者2</td><td>交換者1：パイレーツトララレドン＆ネオンベーコン＆エッグ妖怪ピザリザ ←-→ 交換者2：トララレドン2体＆ロス家</td><td>2026/07/29</td></tr>
+    <tr><td>交換者1 / 交換者2</td><td>交換者1：パイレーツトララレドン＆ネオンベーコン＆エッグ妖怪ピザリザ ←-→ 交換者2：トララレドン2体＆ロス家</td><td>2026/07/29</td></tr>
   </table>
 </section>
 
