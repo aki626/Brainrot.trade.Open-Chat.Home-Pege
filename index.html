@@ -37,7 +37,7 @@
 }
 
 /* ============================
-   全体
+   全体（細長くする）
 ============================ */
 body {
   margin: 0;
@@ -46,28 +46,41 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
+.main-wrapper {
+  max-width: 600px;      /* ←細長くする */
+  padding: 20px;
+  margin-left: 20px;     /* メニューとの距離 */
+}
+
 /* ============================
-   メニュー
+   メニュー（右側固定）
 ============================ */
 nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 230px;          /* 大きめに表示 */
+  height: 100vh;         /* 画面いっぱいの縦長 */
   background: #111;
-  padding: 10px 20px;
+  border-left: 2px solid #00eaff;
   display: flex;
-  gap: 20px;
-  border-bottom: 2px solid #00eaff;
+  flex-direction: column;
+  padding: 25px;
+  gap: 30px;
+  box-shadow: -5px 0 15px #00eaff;
 }
 nav a {
   color: #00eaff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;       /* 大きく表示 */
 }
 
 /* ============================
    セクション
 ============================ */
 section {
-  padding: 20px;
+  margin-bottom: 40px;
 }
 
 /* ============================
@@ -141,14 +154,16 @@ window.onload = () => {
   <div class="loader-text">Loading</div>
 </div>
 
-<!-- メニュー -->
+<!-- メニュー（右側固定） -->
 <nav>
   <a href="#members">メンバー</a>
-  <a href="#exchange">成立した交換一覧</a>
-  <a href="#url">このオプのURL</a>
+  <a href="#exchange">交換一覧</a>
+  <a href="#url">オプURL</a>
 </nav>
 
-<!-- メンバー -->
+<!-- 細長いメインコンテンツ -->
+<div class="main-wrapper">
+
 <section id="members">
   <h2>このオプのメンバー</h2>
 
@@ -163,7 +178,6 @@ window.onload = () => {
   <div class="member-card">名前：あき / 役職：メンバー</div>
 </section>
 
-<!-- 交換一覧 -->
 <section id="exchange">
   <h2>成立した交換一覧</h2>
   <table class="exchange-table">
@@ -172,13 +186,14 @@ window.onload = () => {
   </table>
 </section>
 
-<!-- URL -->
 <section id="url">
   <h2>このオプのURL</h2>
   <a class="join-btn" href="https://line.me/ti/g2/6HkcfrMe2FZGKfMmBNKbXJngqGW2rVTDHImR0g?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
     参加する
   </a>
 </section>
+
+</div>
 
 </body>
 </html>
